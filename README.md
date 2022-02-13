@@ -9,6 +9,7 @@ I am doing this by using [GitHub Pages for my Alias](https://github.com/dschveni
 ## Information about Doug Schveninger
 
 [Background Summaries](dougschveninger/about/history.md)
-## TODO to review ad add to the site
+
+## TODO: review and add to the site
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
