@@ -1,6 +1,6 @@
 # Doug Schveninger GitHub Pages
 
-I am using [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) as a sample way to creating a quick static website about yourself and information that you have learned other information about yourself.
+I am using [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) as a sample way to creating a quick static website about yourself and information that you have learned and other information about yourself.
 
 ## Original sample markdown
 
