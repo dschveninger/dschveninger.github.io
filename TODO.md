@@ -15,5 +15,6 @@ This file contains a list TODO for this repo.
    1. Add how to Area
       1. git best practices
       1. git squash when you commit often
+   1. [Jekyll](https://jekyllrb.com/)
 1. General
    1. Improve 404 page
