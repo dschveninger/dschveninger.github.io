@@ -9,7 +9,7 @@ learned and other information about yourself.
 I am doing this by using [GitHub Pages for my Alias](https://github.com/dschveninger/dschveninger.github.io) and including
 [My Markdown Information repo](https://github.com/dschveninger/dougschveninger) as a
 [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to share the data with GitHub Pages.
-
+<!-- markdown-link-check-disable -->
 [Information about Doug Schveninger](dougschveninger/about/introduction.md)
-
+<!-- markdown-link-check-enable -->
 [todo page](TODO.md) of items that I would like to improve in the repos.
