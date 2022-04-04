@@ -12,18 +12,23 @@ help: ## List the make targets supported
 
 ##@ Install - targets to install supporting software
 
-install: install-mdl ## install all dependances
+install: install-mdl ## install all dependencies
 
-install-mdl: ## install markdown lint tool
-	@echo "installing mdl using gem"
-	gem install mdl
+install-docker: ## install markdown lint tool
+	# TODO need to get a standard install tool for docker
+	@echo "docker is needed"
 
 ##@ Test - Quality Assurance targets to format, lint and test this repository
 
-qa: qa-mdlint ## Run all qa targets for the repo
+qa: qa-lint  ## Run all QA targets on repository
 
-qa-mdlint: ## Run MArkdownlint on all files in repo
-	@echo "Running markdownlint on repo"
-	@mdl .
+qa-lint:  ## lint all code type in the repo
+	@docker run --rm -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
 
-.PHONY: help install install-mdl qa qa-mdlint
+lint-arg:  ## run linter against all files. make lint-arg REGEX={file or directory}
+	@docker run --rm -e FILTER_REGEX_INCLUDE=$(REGEX) -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
+
+lint-run:  ## run all linter against all files
+	@docker run --rm -ti --entrypoint=/bin/bash -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
+
+.PHONY: help install install-docker qa qa-lint

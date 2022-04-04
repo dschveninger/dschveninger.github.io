@@ -1,0 +1,4 @@
+# Local generated output files
+*.log
+
+report/
