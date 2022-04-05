@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 PROJ_DIR := $(shell pwd)
 SHELL = /bin/bash
+MEGA_LINTER_IMAGE ?= megalinter/megalinter:v5
 
 # adjust this if the api is incremented
 
@@ -22,13 +23,16 @@ install-docker: ## install markdown lint tool
 
 qa: qa-lint  ## Run all QA targets on repository
 
-qa-lint:  ## lint all code type in the repo
-	@docker run --rm -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
+qa-lint:  ## run Mega-linter using .mega-liner.yml config files
+	@docker run --rm -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-lint-arg:  ## run linter against all files. make lint-arg REGEX={file or directory}
-	@docker run --rm -e FILTER_REGEX_INCLUDE=$(REGEX) -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
+lint-fix:  ## run Mega-linter in fix mode
+	@docker run --rm -e APPLY_FIXES=all -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-lint-run:  ## run all linter against all files
-	@docker run --rm -ti --entrypoint=/bin/bash -v /Users/doug/github/dschveninger.github.io:/tmp/lint megalinter/megalinter:v5
+lint-regex:  ## run Mega-linter against regex. make lint-arg REGEX={file or directory}
+	@docker run --rm -e FILTER_REGEX_INCLUDE=$(REGEX) -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-.PHONY: help install install-docker qa qa-lint
+lint-run:  ## run Mega-linter container in interactive mode
+	@docker run --rm -ti --entrypoint=/bin/bash -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
+
+.PHONY: help install install-docker lint-fix lint-regex lint-run qa qa-lint
