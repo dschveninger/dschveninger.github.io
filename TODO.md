@@ -8,7 +8,6 @@ This file contains a list TODO for this repo.
          1. [mac-os](https://jekyllrb.com/docs/installation/macos/)
          1. [ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
          1. [Window](https://jekyllrb.com/docs/installation/windows/)
-      1. [Run local GitHub Page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 1. Content
    1. Complete my background summary and link with dougschveninger
    1. Add a Blog area

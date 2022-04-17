@@ -1,10 +1,14 @@
 # Doug Schveninger GitHub Pages
 
+[![MegaLinter](https://github.com/dschveninger/dschveninger.github.io/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/dschveninger/dschveninger.github.io/actions?query=workflow%3AMegaLinter+branch%3Amain)
+
 ## What is this site about
 
-I am using [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+<!-- markdown-link-check-disable -->
+I am using [GitHub Pages](https://docs.github.com/en/pages)
 as a sample way to creating a quick static website about yourself and information that you have
 learned and other information about yourself.
+<!-- markdown-link-check-enable -->
 
 I am doing this by using [GitHub Pages for my Alias](https://github.com/dschveninger/dschveninger.github.io) and including
 [My Markdown Information repo](https://github.com/dschveninger/dougschveninger) as a
