@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 PROJ_DIR := $(shell pwd)
 SHELL = /bin/bash
-MEGA_LINTER_IMAGE ?= megalinter/megalinter:v5
+MEGA_LINTER_IMAGE ?= megalinter/megalinter-documentation:v5
 
 # adjust this if the api is incremented
 
