@@ -8,7 +8,7 @@
 
 <!-- markdown-link-check-disable -->
 I am using [GitHub Pages](https://docs.github.com/en/pages)
-as a sample way to creating a quick static website about yourself and information that you have
+as a sample way to creating a quick static website about myself and information that you have
 learned and other information about yourself.
 <!-- markdown-link-check-enable -->
 
@@ -17,9 +17,8 @@ I am doing this by using [GitHub Pages for my Alias](https://github.com/dschveni
 [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) to share the data with GitHub Pages.
 <!-- markdown-link-check-disable -->
 
-- [Information about Doug Schveninger Career](dougschveninger/about/introduction.md)
-- [How to](dougschveninger/howto/index.md) notes on different technologies
-- blogs coming soon...
+- [Information about Doug Schveninger](dougschveninger/README.md)
+- Other info coming soon...
 
 <!-- markdown-link-check-enable -->
 [todo page](TODO.md) of items that I would like to improve in the repos.
