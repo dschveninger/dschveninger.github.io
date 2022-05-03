@@ -13,7 +13,7 @@ help: ## List the make targets supported
 
 ##@ Install - targets to install supporting software
 
-install: install-mdl ## install all dependencies
+install: install-docker ## install all dependencies
 
 install-docker: ## install markdown lint tool
 	# TODO need to get a standard install tool for docker
@@ -21,18 +21,9 @@ install-docker: ## install markdown lint tool
 
 ##@ Test - Quality Assurance targets to format, lint and test this repository
 
-qa: qa-lint  ## Run all QA targets on repository
+qa: lint  ## Run all QA targets on repository
 
-qa-lint:  ## run Mega-linter using .mega-liner.yml config files
-	@docker run --rm -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
+.PHONY: help install install-docker qa
 
-lint-fix:  ## run Mega-linter in fix mode
-	@docker run --rm -e APPLY_FIXES=all -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
-
-lint-regex:  ## run Mega-linter against regex. make lint-arg REGEX={file or directory}
-	@docker run --rm -e FILTER_REGEX_INCLUDE=$(REGEX) -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
-
-lint-run:  ## run Mega-linter container in interactive mode
-	@docker run --rm -ti --entrypoint=/bin/bash -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
-
-.PHONY: help install install-docker lint-fix lint-regex lint-run qa qa-lint
+COMMON_DIR ?= common-tools
+   -include $(COMMON_DIR)/mk/megalinter.mk

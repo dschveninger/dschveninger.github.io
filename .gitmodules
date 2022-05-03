@@ -1,3 +1,6 @@
 [submodule "dougschveninger"]
 	path = dougschveninger
 	url = https://github.com/dschveninger/dougschveninger.git
+[submodule "common-tools"]
+	path = common-tools
+	url = https://github.com/dschveninger/common-tools
